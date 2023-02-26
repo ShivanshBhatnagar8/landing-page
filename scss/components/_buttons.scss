@@ -1,0 +1,84 @@
+.btn {
+  &:link,
+  &:visited {
+    border-radius: 8rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-decoration: none;
+    padding: 1rem 2.6rem;
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s;
+
+    text-transform: uppercase;
+  }
+  &:hover {
+    transform: translateY(-0.2rem);
+    &::after {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+  }
+  &--green {
+    background-color: $color-green-tertiary;
+    color: $color-green-primary;
+    align-self: flex-start;
+    @media only screen and (max-width: 29em) {
+      align-self: center;
+      width: 90;
+    }
+
+    &::after {
+      background-color: $color-green-tertiary;
+    }
+  }
+  &--blue {
+    background-color: $color-blue-primary;
+    color: $color-white-primary;
+    align-self: center;
+
+    &::after {
+      background-color: $color-blue-primary;
+    }
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 8rem;
+
+    transition: all 0.3s;
+  }
+}
+
+.btn--click {
+  display: inline-block;
+  background-color: $color-green-quaternary;
+  font-size: 1.4rem;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 60%;
+  color: $color-white-primary;
+  cursor: pointer;
+  @media only screen and (max-width: 39em) {
+    border-radius: 80%;
+    padding: 1.4rem 1.4rem;
+    font-size: 1.8rem;
+  }
+  @media only screen and (max-width: 29em) {
+    border-radius: 80%;
+    padding: 1.4rem 1.4rem;
+    font-size: 1.8rem;
+  }
+  &--right {
+    transform: translateX(-50%);
+  }
+  &--left {
+    transform: translateX(50%);
+    z-index: 2;
+  }
+}

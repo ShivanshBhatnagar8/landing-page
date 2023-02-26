@@ -1,0 +1,94 @@
+.testimonials {
+  grid-area: testimonials;
+  position: relative;
+  padding: 2.6rem 2rem;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(../img/Testimonial.jpg);
+  background-position: bottom;
+  background-size: cover;
+  isolation: isolate;
+
+  &__heading {
+    text-align: center;
+    font-size: 3rem;
+    color: $color-green-quinary;
+    font-weight: 500;
+
+    span {
+      background-color: $color-green-senary;
+      padding: 0 0.8rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+    }
+  }
+  &__cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    margin-top: 2rem;
+    @media only screen and (max-width: 29em) {
+      flex-wrap: wrap;
+    }
+    &--1,
+    &--2,
+    &--3 {
+      display: flex;
+      flex-direction: column;
+      background-color: $color-white-primary;
+      border-radius: 0.5rem;
+      gap: 1.2rem;
+      padding: 2rem 2rem;
+      width: 25%;
+      @media only screen and (max-width: 56.25em) {
+        width: 50%;
+      }
+
+      @media only screen and (max-width: 43.75em) {
+        width: 80%;
+      }
+      @media only screen and (max-width: 37.5em) {
+        width: 100%;
+        padding: 2.4rem 2.4rem;
+      }
+
+      p {
+        color: $color-green-quaternary;
+        font-size: 1.4rem;
+        @media only screen and (max-width: 34.375em) {
+          font-size: 1.6rem;
+        }
+        @media only screen and (max-width: 29em) {
+          font-size: 2rem;
+        }
+      }
+      span {
+        margin-top: 2rem;
+        display: inline-block;
+        font-size: 1.4rem;
+        color: $color-green-quaternary;
+        @media only screen and (max-width: 29em) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  &__button {
+    text-align: center;
+    display: flex;
+    gap: 4.8rem;
+    width: 99%;
+    justify-content: center;
+    margin-top: 2rem;
+    @media only screen and (max-width: 39em) {
+      gap: 7rem;
+    }
+    @media only screen and (max-width: 29em) {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+}

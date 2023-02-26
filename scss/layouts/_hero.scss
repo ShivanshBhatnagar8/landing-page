@@ -1,0 +1,83 @@
+.hero {
+  grid-area: hero;
+  background-color: $color-green-quaternary;
+
+  &__img {
+    width: 50%;
+    border-radius: 4rem;
+
+    @media only screen and (max-width: 29em) {
+      align-self: center;
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+  &__block {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 29em) {
+      flex-wrap: wrap;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+    @media only screen and (max-width: 29em) {
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+  &__heading {
+    max-width: 70%;
+    @media only screen and (max-width: 64em) {
+      max-width: 80%;
+    }
+
+    @media only screen and (max-width: 39em) {
+      max-width: 90%;
+    }
+    @media only screen and (max-width: 29em) {
+      max-width: 100%;
+    }
+  }
+  &__text {
+    font-size: $font-size-secondary;
+    font-weight: 500;
+    color: $color-white-primary;
+    align-self: flex-start;
+    width: 60%;
+    @media only screen and (max-width: 29em) {
+      width: 85%;
+      align-self: center;
+    }
+  }
+  &__brands {
+    text-align: center;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    padding: 2rem 2rem;
+
+    & p {
+      font-size: $font-size-tertiary;
+      color: $color-white-primary;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+}
+.brands {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &__logo {
+    width: 10rem;
+    object-fit: contain;
+    filter: invert(98%) sepia(50%) saturate(10%) hue-rotate(148deg)
+      brightness(100%) contrast(100%);
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "Simple landing page",
+  "main": "index.js",
+  "scripts": {
+    "compile:css": "node-sass scss/main.scss css/style.css -w"
+  },
+  "keywords": [],
+  "author": "Shivansh Bhatnagar",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

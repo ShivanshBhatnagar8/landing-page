@@ -1,0 +1,36 @@
+.blog {
+  grid-area: blog;
+  margin-top: 4.2rem;
+  &__box {
+    display: flex;
+
+    background-color: $color-moonstone;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    width: 40%;
+    align-items: center;
+    padding: 3rem 3rem;
+    @media only screen and (max-width: 34.375em) {
+      width: 60%;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.8rem;
+    text-align: center;
+
+    p {
+      font-size: 1.4rem;
+      color: $color-green-quinary;
+      @media only screen and (max-width: 34.375em) {
+        font-size: 1.6rem;
+      }
+      @media only screen and (max-width: 29em) {
+        font-size: 2rem;
+      }
+    }
+  }
+}

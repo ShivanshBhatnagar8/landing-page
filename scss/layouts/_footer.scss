@@ -1,0 +1,51 @@
+.footer {
+  grid-area: footer;
+  margin-top: 4.2rem;
+  padding: 2rem 2rem;
+  background-color: $color-green-quinary;
+
+  &-box {
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: 29em) {
+      display: block;
+    }
+
+    &-part-1,
+    &-part-2,
+    &-part-3,
+    &-part-4 {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      @media only screen and (max-width: 29em) {
+        align-self: stretch;
+        gap: 2.2rem;
+      }
+    }
+  }
+  &-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $color-white-primary;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  @media only screen and (max-width: 29em) {
+    font-size: 2.6rem;
+    margin-top: 1.6rem;
+  }
+}
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}

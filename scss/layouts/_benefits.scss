@@ -1,0 +1,105 @@
+.benefits {
+  grid-area: benefits;
+  background-image: url(../img/benefits.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__box {
+    display: flex;
+    margin-top: 4.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 3rem;
+    width: 90%;
+    @media only screen and (max-width: 29em) {
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+    }
+    &--1,
+    &--2,
+    &--3 {
+      background-color: $color-white-primary;
+      width: 33.333%;
+      padding: 1.4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      border-radius: 1rem;
+      @media only screen and (max-width: 43.75em) {
+        width: 45%;
+      }
+      @media only screen and (max-width: 37.5em) {
+        width: 50%;
+      }
+    }
+    &--4 {
+      background-color: $color-green-senary;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 35%;
+      padding: 1.8rem 2.4rem;
+      border-radius: 0.5rem;
+      transform: translateX(97%) translateY(40%);
+      @media only screen and (max-width: 43.75em) {
+        width: 50%;
+        transform: translateX(50%) translateY(40%);
+      }
+      @media only screen and (max-width: 37.5em) {
+        width: 60%;
+        transform: translateX(33%) translateY(40%);
+      }
+
+      &--heading {
+        align-self: center;
+        color: $color-green-quinary;
+        font-size: 2.6rem;
+        font-weight: 500;
+        @media only screen and (max-width: 29em) {
+          font-size: 3rem;
+        }
+        & span {
+          color: $color-green-secondary;
+          @media only screen and (max-width: 29em) {
+            font-size: 3rem;
+          }
+        }
+      }
+      &--text {
+        font-size: 1.2rem;
+        color: $color-green-quaternary;
+        line-height: 2rem;
+        @media only screen and (max-width: 43.75em) {
+          font-size: 1.4rem;
+        }
+        @media only screen and (max-width: 37.5em) {
+          font-size: 1.6rem;
+        }
+        @media only screen and (max-width: 29em) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  &__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+
+    align-self: center;
+    color: $color-green-quinary;
+    @media only screen and (max-width: 29em) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    color: $color-green-quaternary;
+    line-height: 2rem;
+    @media only screen and (max-width: 29em) {
+      font-size: 2rem;
+      line-height: 2.2rem;
+    }
+  }
+}
